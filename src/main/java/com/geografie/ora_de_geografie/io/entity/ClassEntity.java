@@ -22,6 +22,9 @@ public class ClassEntity implements Serializable {
     @OneToMany(mappedBy = "classId", cascade = CascadeType.ALL)
     private List<UserEntity> users;
 
+    @OneToMany(mappedBy = "classId", cascade = CascadeType.ALL)
+    private List<QuestionEntity> questions;
+
     public Long getId() {
         return id;
     }
