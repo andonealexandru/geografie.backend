@@ -32,10 +32,10 @@ public class UserController {
 
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo(userDto.getEmail());
-        mailMessage.setSubject("Verifica-ti contul pentru ora de geografie!");
-        mailMessage.setFrom("rockthecodeandone@gmail.com");
-        mailMessage.setText("To confirm your account please click here: " +
-                "https://ora_de_geografie.herokuapp.com/users/confirm-account?token=" + createdUser.getEmailConfirmationToken());
+        mailMessage.setSubject("Complete Registration!");
+        mailMessage.setFrom("andonealexandru19@gmail.com");
+        mailMessage.setText("To confirm your account please clik here: " +
+                "https://itec2019rockthecode.herokuapp.com/users/confirm-account?token=" + createdUser.getEmailConfirmationToken());
 
         emailSenderService.sendEmail(mailMessage);
 
