@@ -26,11 +26,8 @@ public class QuestionEntity implements Serializable {
     @Column(nullable = false)
     private Boolean gridAnswer;
 
-    @Column
-    private List<String> answers;
-
-    @Column
-    private Integer correctAnswer;
+    @OneToMany(mappedBy = "questionId", cascade = CascadeType.ALL)
+    private List<AnswerEntity> answers;
 
     @Column(nullable = false)
     private Boolean photo;
@@ -78,20 +75,12 @@ public class QuestionEntity implements Serializable {
         this.gridAnswer = gridAnswer;
     }
 
-    public List<String> getAnswers() {
+    public List<AnswerEntity> getAnswers() {
         return answers;
     }
 
-    public void setAnswers(List<String> answers) {
+    public void setAnswers(List<AnswerEntity> answers) {
         this.answers = answers;
-    }
-
-    public Integer getCorrectAnswer() {
-        return correctAnswer;
-    }
-
-    public void setCorrectAnswer(Integer correctAnswer) {
-        this.correctAnswer = correctAnswer;
     }
 
     public Boolean getPhoto() {
