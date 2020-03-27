@@ -34,7 +34,7 @@ public class QuestionController {
         return questionRest;
     }
 
-    @GetMapping(consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
     public QuestionRest getQuestion(@RequestParam String userId) {
 
         ModelMapper modelMapper = new ModelMapper();
