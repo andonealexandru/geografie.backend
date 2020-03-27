@@ -3,8 +3,8 @@ package com.geografie.ora_de_geografie.shared.dto;
 public class AnswerDto {
 
     private Long id;
-    private String classId;
-    private String classroom;
+    private String questionId;
+    private String answer;
     private Boolean correct;
 
     public Long getId() {
@@ -15,20 +15,20 @@ public class AnswerDto {
         this.id = id;
     }
 
-    public String getClassId() {
-        return classId;
+    public String getQuestionId() {
+        return questionId;
     }
 
-    public void setClassId(String classId) {
-        this.classId = classId;
+    public void setQuestionId(String questionId) {
+        this.questionId = questionId;
     }
 
-    public String getClassroom() {
-        return classroom;
+    public String getAnswer() {
+        return answer;
     }
 
-    public void setClassroom(String classroom) {
-        this.classroom = classroom;
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 
     public Boolean getCorrect() {

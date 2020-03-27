@@ -35,7 +35,7 @@ public class UserController {
         mailMessage.setSubject("Complete Registration!");
         mailMessage.setFrom("andonealexandru19@gmail.com");
         mailMessage.setText("To confirm your account please clik here: " +
-                "https://itec2019rockthecode.herokuapp.com/users/confirm-account?token=" + createdUser.getEmailConfirmationToken());
+                "localhost:8080/confirm-account/" + createdUser.getEmailConfirmationToken());
 
         emailSenderService.sendEmail(mailMessage);
 
