@@ -80,7 +80,7 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public QuestionDto getQuestion(String classId) {
-
+        
         ClassEntity classEntity = classRepository.findByClassId(classId);
         if (classEntity == null) throw new RuntimeException("Class not found");
         List<QuestionEntity> questionEntities = questionRepository.findByClassId(classEntity);
